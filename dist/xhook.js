@@ -471,7 +471,7 @@ XHookHttpRequest = window[XMLHTTP] = function() {
       _ref3 = request.headers;
       for (header in _ref3) {
         value = _ref3[header];
-        if (header) {
+        if (header && value !== "") {
           xhr.setRequestHeader(header, value);
         }
       }
